@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>ShoppingCart</title>
+</head>
+<body>
+カート
+<th:block th:each="item: ${items}">
+    <dt><br>
+      <span class="itemlist" th:text="${item.value.name}"></span><br>
+      <span class="itemlist" th:text="${item.value.price}"></span>円<br>
+      <input type="submit" id = "${item.value.itemid}" value="カートに追加" />
+
+    </dt>
+  </th:block>
+</form>
+
+</body>
+</html>
